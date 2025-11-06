@@ -1,0 +1,61 @@
+{
+  "avioes": [
+    {
+      "id": 1,
+      "modelo": "Boeing 737-800",
+      "fabricante": "Boeing",
+      "capacidade_passageiros": 189,
+      "velocidade_cruzeiro_km_h": 839,
+      "autonomia_km": 5765,
+      "ano_primeiro_voo": 1997,
+      "companhia_exemplo": "Gol Linhas Aéreas",
+      "status": "Em operação"
+    },
+    {
+      "id": 2,
+      "modelo": "Airbus A320neo",
+      "fabricante": "Airbus",
+      "capacidade_passageiros": 194,
+      "velocidade_cruzeiro_km_h": 833,
+      "autonomia_km": 6850,
+      "ano_primeiro_voo": 2016,
+      "companhia_exemplo": "LATAM Brasil",
+      "status": "Em operação"
+    },
+    {
+      "id": 3,
+      "modelo": "Embraer E195-E2",
+      "fabricante": "Embraer",
+      "capacidade_passageiros": 146,
+      "velocidade_cruzeiro_km_h": 839,
+      "autonomia_km": 4800,
+      "ano_primeiro_voo": 2019,
+      "companhia_exemplo": "Azul Linhas Aéreas",
+      "status": "Em operação"
+    },
+    {
+      "id": 4,
+      "modelo": "Boeing 787-9 Dreamliner",
+      "fabricante": "Boeing",
+      "capacidade_passageiros": 296,
+      "velocidade_cruzeiro_km_h": 903,
+      "autonomia_km": 14140,
+      "ano_primeiro_voo": 2013,
+      "companhia_exemplo": "LATAM (voos internacionais)",
+      "status": "Em operação"
+    },
+    {
+      "id": 5,
+      "modelo": "ATR 72-600",
+      "fabricante": "ATR",
+      "capacidade_passageiros": 72,
+      "velocidade_cruzeiro_km_h": 510,
+      "autonomia_km": 1528,
+      "ano_primeiro_voo": 2010,
+      "companhia_exemplo": "Azul Linhas Aéreas (regionais)",
+      "status": "Em operação"
+    }
+  ],
+  "total_avioes": 5,
+  "ultima_atualizacao": "2025-11-06"
+}
