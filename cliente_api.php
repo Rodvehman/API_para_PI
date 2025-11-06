@@ -1,5 +1,5 @@
 <?php
-    $url = "http://localhost/API-Cafe3/api.php?id=1";
+    $url = "http://localhost/API_para_PI/api.php";
 
     $resultado = file_get_contents($url);
 
@@ -15,6 +15,7 @@
             'content' => json_encode($avioes)
         ]
     ];
+
 
     $dados = $avioes["avioes"];
 
