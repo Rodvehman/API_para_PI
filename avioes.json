@@ -54,8 +54,173 @@
       "ano_primeiro_voo": 2010,
       "companhia_exemplo": "Azul Linhas Aéreas (regionais)",
       "status": "Em operação"
+    },
+    {
+      "id": 6,
+      "modelo": "Boeing 777-300ER",
+      "fabricante": "Boeing",
+      "capacidade_passageiros": 396,
+      "velocidade_cruzeiro_km_h": 892,
+      "autonomia_km": 13649,
+      "ano_primeiro_voo": 2003,
+      "companhia_exemplo": "American Airlines",
+      "status": "Em operação"
+    },
+    {
+      "id": 7,
+      "modelo": "Airbus A350-900",
+      "fabricante": "Airbus",
+      "capacidade_passageiros": 325,
+      "velocidade_cruzeiro_km_h": 903,
+      "autonomia_km": 15000,
+      "ano_primeiro_voo": 2013,
+      "companhia_exemplo": "Delta Air Lines",
+      "status": "Em operação"
+    },
+    {
+      "id": 8,
+      "modelo": "Embraer E175",
+      "fabricante": "Embraer",
+      "capacidade_passageiros": 88,
+      "velocidade_cruzeiro_km_h": 834,
+      "autonomia_km": 3700,
+      "ano_primeiro_voo": 2003,
+      "companhia_exemplo": "SkyWest Airlines",
+      "status": "Em operação"
+    },
+    {
+      "id": 9,
+      "modelo": "Bombardier CRJ900",
+      "fabricante": "Bombardier",
+      "capacidade_passageiros": 90,
+      "velocidade_cruzeiro_km_h": 829,
+      "autonomia_km": 2871,
+      "ano_primeiro_voo": 2001,
+      "companhia_exemplo": "Mesa Airlines",
+      "status": "Em operação"
+    },
+    {
+      "id": 10,
+      "modelo": "Boeing 737 MAX 8",
+      "fabricante": "Boeing",
+      "capacidade_passageiros": 178,
+      "velocidade_cruzeiro_km_h": 839,
+      "autonomia_km": 6570,
+      "ano_primeiro_voo": 2017,
+      "companhia_exemplo": "Southwest Airlines",
+      "status": "Em operação"
+    },
+    {
+      "id": 11,
+      "modelo": "Airbus A321neo",
+      "fabricante": "Airbus",
+      "capacidade_passageiros": 206,
+      "velocidade_cruzeiro_km_h": 833,
+      "autonomia_km": 7400,
+      "ano_primeiro_voo": 2016,
+      "companhia_exemplo": "American Airlines",
+      "status": "Em operação"
+    },
+    {
+      "id": 12,
+      "modelo": "Cessna 208 Caravan",
+      "fabricante": "Cessna",
+      "capacidade_passageiros": 9,
+      "velocidade_cruzeiro_km_h": 344,
+      "autonomia_km": 1796,
+      "ano_primeiro_voo": 1982,
+      "companhia_exemplo": "FedEx Feeder",
+      "status": "Em operação"
+    },
+    {
+      "id": 13,
+      "modelo": "Boeing 747-8",
+      "fabricante": "Boeing",
+      "capacidade_passageiros": 467,
+      "velocidade_cruzeiro_km_h": 917,
+      "autonomia_km": 14815,
+      "ano_primeiro_voo": 2010,
+      "companhia_exemplo": "Lufthansa",
+      "status": "Em operação"
+    },
+    {
+      "id": 14,
+      "modelo": "Airbus A380-800",
+      "fabricante": "Airbus",
+      "capacidade_passageiros": 555,
+      "velocidade_cruzeiro_km_h": 903,
+      "autonomia_km": 14800,
+      "ano_primeiro_voo": 2005,
+      "companhia_exemplo": "Emirates",
+      "status": "Em operação"
+    },
+    {
+      "id": 15,
+      "modelo": "Embraer Phenom 300",
+      "fabricante": "Embraer",
+      "capacidade_passageiros": 7,
+      "velocidade_cruzeiro_km_h": 839,
+      "autonomia_km": 3668,
+      "ano_primeiro_voo": 2008,
+      "companhia_exemplo": "NetJets",
+      "status": "Em operação"
+    },
+    {
+      "id": 16,
+      "modelo": "Bombardier Global 7500",
+      "fabricante": "Bombardier",
+      "capacidade_passageiros": 19,
+      "velocidade_cruzeiro_km_h": 982,
+      "autonomia_km": 14260,
+      "ano_primeiro_voo": 2018,
+      "companhia_exemplo": "VistaJet",
+      "status": "Em operação"
+    },
+    {
+      "id": 17,
+      "modelo": "Gulfstream G650",
+      "fabricante": "Gulfstream",
+      "capacidade_passageiros": 16,
+      "velocidade_cruzeiro_km_h": 956,
+      "autonomia_km": 13900,
+      "ano_primeiro_voo": 2009,
+      "companhia_exemplo": "Qatar Executive",
+      "status": "Em operação"
+    },
+    {
+      "id": 18,
+      "modelo": "Dassault Falcon 8X",
+      "fabricante": "Dassault",
+      "capacidade_passageiros": 16,
+      "velocidade_cruzeiro_km_h": 900,
+      "autonomia_km": 11945,
+      "ano_primeiro_voo": 2015,
+      "companhia_exemplo": "Flying Group",
+      "status": "Em operação"
+    },
+    {
+      "id": 19,
+      "modelo": "Airbus A220-300",
+      "fabricante": "Airbus",
+      "capacidade_passageiros": 160,
+      "velocidade_cruzeiro_km_h": 829,
+      "autonomia_km": 6389,
+      "ano_primeiro_voo": 2015,
+      "companhia_exemplo": "airBaltic",
+      "status": "Em operação"
+    },
+    {
+      "id": 20,
+      "modelo": "Boeing 767-300F",
+      "fabricante": "Boeing",
+      "capacidade_passageiros": 0,
+      "velocidade_cruzeiro_km_h": 850,
+      "autonomia_km": 11000,
+      "ano_primeiro_voo": 1986,
+      "companhia_exemplo": "UPS Airlines",
+      "status": "Em operação"
     }
   ],
-  "total_avioes": 5,
-  "ultima_atualizacao": "2025-11-06"
+  "total_avioes": 20,
+  "ultima_atualizacao": "2025-11-08"
 }
