@@ -1,68 +1,85 @@
 <?php
-    header("Content-Type: application/json; charset=UTF-8");
-    header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Origin: *");
 
-    $metodo = $_SERVER['REQUEST_METHOD'];
+// === 1. Lê o arquivo JSON ===
+$arquivo = 'avioes.json';
+$conteudo = file_get_contents($arquivo);
 
-    // Leitura do arquivo JSON
-    $arquivo = 'avioes.json';
-    $conteudo = file_get_contents($arquivo);
+if ($conteudo === false) {
+    http_response_code(500);
+    echo json_encode(["erro" => "Arquivo 'avioes.json' não encontrado."]);
+    exit;
+}
 
-    // Validação se o arquivo existe (ou se deu a carga corretamente)
-    if ($conteudo === false){
-        http_response_code(500);
-        echo (["erro => Arquivo 'avioes.json' não encontrado."]);
-        exit;
-    }
+$dados = json_decode($conteudo, true);
+if (json_last_error() !== JSON_ERROR_NONE) {
+    http_response_code(500);
+    echo json_encode(["erro" => "Formato JSON inválido."]);
+    exit;
+}
 
-    // Converte o JSON
-    $dados = json_decode($conteudo, true);
-    if (json_last_error() !== JSON_ERROR_NONE){
-        http_response_code(500);
-        echo json_encode(["erro => Formato JSON inválido."]);
-        exit;
-    }
+$avioes = $dados['avioes'] ?? [];
 
-    $avioes = $dados['avioes'] ?? [];
+// === 2. Pega parâmetros da URL ===
+$id = $_GET['id'] ?? null;
+$fabricante = $_GET['fabricante'] ?? null;
+$modelo = $_GET['modelo'] ?? null;
+$capacidade = $_GET['capacidade'] ?? null;
 
-    // Pega o parâmetro da URL
-    $id = $_GET['id'] ?? null;
-    $fabricante = $_GET['fabricante'] ?? null;
+$resultado = [];
 
-    // aplica o filtro
-    $resultado = [];
-
-    if ($id !== null){
-        $id = (int) $id;
-        foreach ($avioes as $aviao){
-            if ($aviao['id'] == $id){
-                $resultado = $aviao;
-                break;
-            }
+// === 3. Aplica filtros (prioridade: id > fabricante > modelo > capacidade) ===
+if ($id !== null) {
+    $id = (int)$id;
+    foreach ($avioes as $aviao) {
+        if ($aviao['id'] == $id) {
+            $resultado[] = $aviao;
+            break;
         }
-    } else if ($fabricante !== null){
-        $fabricante = trim($fabricante);
-        foreach ($avioes as $aviao) {
-            if (strcasecmp($aviao['fabricante'], $fabricante) === 0){
-                $resultado[] = $aviao;
-            }
+    }
+}
+elseif ($fabricante !== null) {
+    $fabricante = trim($fabricante);
+    foreach ($avioes as $aviao) {
+        if (strcasecmp($aviao['fabricante'], $fabricante) === 0) {
+            $resultado[] = $aviao;
         }
-    } else {
-        $resultado = $avioes;
     }
-
-    if (empty($resultado)){
-        http_response_code(404);
-        echo json_encode([
-            "mensagem" => "Nenhum avião localizado",
-            "filtro usados" => [
-                "id" => $id,
-                "fabricante" => $fabricante
-            ]
-        ]);
-        exit;
+}
+elseif ($modelo !== null) {
+    $modelo = trim($modelo);
+    foreach ($avioes as $aviao) {
+        if (stripos($aviao['modelo'], $modelo) !== false) {
+            $resultado[] = $aviao;
+        }
     }
+}
+elseif ($capacidade !== null) {
+    //$capacidade = (int)$min_capacidade;
+    foreach ($avioes as $aviao) {
+        if ($aviao['capacidade'] >= $capacidade) {
+            $resultado[] = $aviao;
+        }
+    }
+}
+else {
+    $resultado = $avioes;
+}
 
-    // === 5. Retorna em JSON bonito ===
+// === 4. Resposta ===
+if (empty($resultado)) {
+    http_response_code(404);
+    echo json_encode([
+        "mensagem" => "Nenhum avião encontrado",
+        "filtros_usados" => [
+            "id" => $id,
+            "fabricante" => $fabricante,
+            "modelo" => $modelo,
+            "capacidade_minima" => $min_capacidade
+        ]
+    ]);
+} else {
     echo json_encode($resultado, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+}
 ?>
