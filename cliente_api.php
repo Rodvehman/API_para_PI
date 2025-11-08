@@ -2,10 +2,7 @@
     $url = "http://localhost/API_para_PI/api.php";
 
     $resultado = file_get_contents($url);
-
-    echo $resultado;
-
-  
+ 
     $avioes = json_decode($resultado, true);
 
     $estrutura = [
@@ -16,8 +13,5 @@
         ]
     ];
 
-
     $dados = $avioes["avioes"];
-
-    echo $dados;
 ?>
